@@ -10,28 +10,31 @@ function Results(props) {
     }, []);
 
     async function fetchData() {
-        const data = await fetch("https://api.mercadolibre.com/sites/MLA/search?q=gatomon&limit=10");
+        const data = await fetch("https://api.mercadolibre.com/sites/MLA/search?q=lego&limit=15");
         const dataJson = await data.json();  
         console.log(dataJson);        
         setItemList(dataJson.results);
     };
 
     return (
-    <ul className="itemList">
-        {itemList.filter((value)=>{
-            return value.title.toLowerCase().includes(props.searchParam.toLowerCase())
-        }).map((value,key)=>{
-            return (
-                <li>
-                    <Item 
-                    name={value.title} 
-                    key={value.id ? value.id : key}
-                    image={value.thumbnail}
-                    />
-                </li>
-            )
-        })}
-    </ul>
+    <div className="itemContainer">
+        <ul className="itemList">
+            {itemList.filter((value)=>{
+                return value.title.toLowerCase().includes(props.searchParam.toLowerCase())
+            }).map((value,key)=>{
+                return (
+                    <li>
+                        <Item 
+                        name={value.title} 
+                        key={value.id ? value.id : key}
+                        image={value.thumbnail}
+                        price={value.price} 
+                        />
+                    </li>
+                )
+            })}
+        </ul>
+    </div>
     )
 };
 
