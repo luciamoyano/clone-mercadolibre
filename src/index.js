@@ -5,12 +5,14 @@ import App from './App';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from './pages/Home';
 import Team from './pages/Team';
+import Product from './pages/Product';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Router>
     <Route exact path="/" component={Home}/>
     <Route exact path="/equipo" component={Team} />
+    <Route exact path="/producto/:id" component={Product}/>
   </Router>,
   document.getElementById('root')
 );
