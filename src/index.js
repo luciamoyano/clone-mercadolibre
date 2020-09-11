@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Home from './pages/Home';
+import Team from './pages/Team';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Route exact path="/" component={Home}/>
+    <Route exact path="/equipo" component={Team} />
+  </Router>,
   document.getElementById('root')
 );
 
