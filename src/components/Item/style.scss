@@ -1,0 +1,11 @@
+li {
+    margin: 0 20px;
+    .item {
+        background:white;
+        width:300px;
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}

@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from './pages/Home';
-import Team from './pages/Team';
+import Search from './pages/Search';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Router>
     <Route exact path="/" component={Home}/>
-    <Route exact path="/equipo" component={Team} />
+    <Route exact path="/search" component={Search} />
   </Router>,
   document.getElementById('root')
 );

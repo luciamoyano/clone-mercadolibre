@@ -1,0 +1,32 @@
+$amarillo: #FFE600;
+$azul: #2E2EFE;
+
+body {
+    background: $amarillo;
+}
+
+img#logo {
+    width:300px;
+}
+
+ul.ml-site-list {
+    width: 100px;
+    list-style-type: none;
+    li.ml-site-country {
+        text-align: lef;
+        display: block;
+        padding:5px;
+        display: inline-block;
+        a {
+            text-decoration:none;
+            display:inline-block;
+            color: $azul;
+            font-size: 14px;
+            padding: 5px 18px 5px 5px;
+            background-color: rgba(255,255,255,.5);
+            border-bottom: 0;
+            border-radius: 4px;
+            transition: all .3s;
+        }
+    };
+};
