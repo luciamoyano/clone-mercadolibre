@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const countriesArr = [
     {name: "Argentina", site_id: "MLA"},
     {name: "Bolivia", site_id: "MBO"},
-    {name: "Brasil", site_id: ""},
+    {name: "Brasil", site_id: "MLB"},
     {name: "Chile", site_id: ""},
     {name: "Colombia", site_id: ""},
     {name: "Costa Rica", site_id: ""},
@@ -22,6 +22,7 @@ const countriesArr = [
     {name: "Uruguay", site_id: ""},
     {name: "Venezuela", site_id: ""}
 ];
+
 class Home extends React.Component {
     render () {
         return (

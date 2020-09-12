@@ -10,7 +10,7 @@ function Results(props) {
     }, []);
 
     async function fetchData() {
-        const data = await fetch("https://api.mercadolibre.com/sites/MLA/search?q=lego&limit=15");
+        const data = await fetch(`https://api.mercadolibre.com/sites/${props.site_id}/search?q=auriculares&limit=15`);
         const dataJson = await data.json();  
         console.log(dataJson);        
         setItemList(dataJson.results);
