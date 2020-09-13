@@ -1,22 +1,35 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Navbar from '../../components/Navbar';
 import Results from '../../components/Results';
-import {useParams} from 'react-router-dom';
 
-function Search(){
-    const [searchParam, setSearchParam] = useState('');
-    const {site_id} = useParams();
+class Search extends React.Component {
+    state = {
+        searchParam: ('')
+    };
+    // reemplaza a:
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         searchParam: ('')
+    //     }
+    // }
 
-    function handleSearch(searchParam){
-        setSearchParam(searchParam);
+    handleSearch(value){
+        this.setState({
+            searchParam: value
+        });
     }
 
-    return (
-        <>
-        <Navbar handleCallback={handleSearch} />
-        <Results searchParam={searchParam} site_id={site_id} />
-        </>
-    )
+    render() {
+        const {searchParam} = this.state;
+        const {site_id} = this.props.match.params;
+        return (
+            <>
+            <Navbar handleCallback={(value) => this.handleSearch(value)} />
+            <Results searchParam={searchParam} site_id={site_id} />
+            </>
+        )
+    }
 };
 
 export default Search;

@@ -4,8 +4,6 @@ import './style.scss';
 import {Link} from 'react-router-dom';
 import countriesArr from '../../site-countries.json';
 
-
-
 class Home extends React.Component {
     render () {
         return (

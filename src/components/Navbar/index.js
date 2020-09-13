@@ -1,17 +1,19 @@
 import React from 'react';
 import './style.scss';
 
-function Navbar(props){
-    function handleChange(e){
-        props.handleCallback(e.target.value);
+class Navbar extends React.Component{
+    handleChange(e){
+        this.props.handleCallback(e.target.value);
     };
 
-    return (
-        <nav>
-        <input type="text" onChange={handleChange} />
-        <button>Buscar</button>
-        </nav>
-    )
+    render() {
+        return (
+            <nav>
+            <input type="text" onChange={(e) => this.handleChange(e)} />
+            <button>Buscar</button>
+            </nav>
+        )
+    }
 };
 
 export default Navbar;
