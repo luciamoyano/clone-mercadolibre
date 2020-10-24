@@ -11,7 +11,7 @@ function Results(props) {
     }, []);
 
     async function fetchData() {
-        const data = await fetch(`https://api.mercadolibre.com/sites/${site_id}/search?q=auriculares&limit=15`);
+        const data = await fetch(`https://api.mercadolibre.com/sites/${site_id}/search?q=computadoras`);
         const dataJson = await data.json();  
         console.log(dataJson);        
         setItemList(dataJson.results);
@@ -30,6 +30,7 @@ function Results(props) {
                         key={value.id ? value.id : key}
                         image={value.thumbnail}
                         price={value.price} 
+                        id={value.id}
                         />
                     </li>
                 )

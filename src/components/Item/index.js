@@ -1,16 +1,21 @@
 import React from 'react';
 import './style.scss';
+import {Link, useParams} from 'react-router-dom';
 
 function Item(props) {
-    const {name, image, price} = props;
+    const {name, image, price, id} = props;
+    const {product_id} = useParams();
+
     return (
-        <div className="item">
-            <img src={image} />
-            <div className="itemInfo">
-                <p className="itemPrice">${price}</p>
-                <p className="itemName">{name}</p>
+        <Link to={`/product/${id}`}>
+            <div className="item">
+                <img src={image} />
+                <div className="itemInfo">
+                    <p className="itemPrice">${price}</p>
+                    <p className="itemName">{name}</p>
+                </div>
             </div>
-        </div>
+        </Link>
     )
 };
 
