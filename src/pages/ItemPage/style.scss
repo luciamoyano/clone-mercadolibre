@@ -1,0 +1,14 @@
+.ItemContainer {
+    background-color:#fff;
+    max-width: 700px;
+    width:70%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    img {
+        background-color:red;
+    }
+    .ItemInfo {
+        background-color: green;
+    }
+}

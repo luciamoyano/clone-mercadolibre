@@ -1,14 +1,30 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import logo from '../../../src/logo-meli.png';
+import './style.scss';
+import {Link} from 'react-router-dom';
+import countriesArr from '../../site-countries.json';
 
-function Home(){
-    return (
+
+
+class Home extends React.Component {
+    render () {
+        return (
         <>
-        <Navbar />
-        <Footer />
+        <div id="homeWrapper">
+            <header>
+                <img src={logo} id='logo'/>
+            </header>
+            <ul className="ml-site-list">
+                {countriesArr.map((country,key) => {
+                    return (
+                    <li className="ml-site-country" key={key}><Link to={`/search/${country.id}`}>{country.name}</Link></li>
+                    )
+                })}
+            </ul>
+        </div>
         </>
-    )
+        )
+    }
 };
 
 export default Home;

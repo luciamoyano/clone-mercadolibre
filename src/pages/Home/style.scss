@@ -1,0 +1,41 @@
+$amarillo: #FFE600;
+$azul: #2E2EFE;
+
+body, html, #root {
+    height: 100%;
+}
+#homeWrapper {
+    background: $amarillo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    header {
+        max-width: 300px;
+        img#logo {
+            width:100%;
+        }
+    }
+    ul.ml-site-list {
+        list-style-type: none;
+        max-width: 300px;
+        padding:0;
+        li.ml-site-country {
+            display: block;
+            margin-bottom:1px;
+            a {
+                text-decoration:none;
+                display:inline-block;
+                text-align: center;
+                color: $azul;
+                font-size: 14px;
+                padding: 5px 10px;
+                background-color: rgba(255,255,255,.5);
+                border-bottom: 0;
+                border-radius: 4px;
+                transition: all .3s;
+            }
+        }
+    }
+}
+

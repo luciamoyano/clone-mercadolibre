@@ -1,0 +1,36 @@
+li {
+    margin: 0 20px;
+    a {
+        text-decoration: none;
+    }
+    .item {
+        background:white;
+        width:200px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        -webkit-box-shadow: 5px 5px 2px -4px rgba(222,222,222,1);
+        -moz-box-shadow: 5px 5px 2px -4px rgba(222,222,222,1);
+        box-shadow: 5px 5px 2px -4px rgba(222,222,222,1);
+        img {
+            display: block;
+            max-width: 100%;
+            margin:0 auto;
+            padding:20px;
+        }
+        .itemInfo {
+            border-top:1px solid #ddd;
+            padding:10px;
+            p {
+                padding:0;
+                margin: 0;
+                &.itemPrice {
+                    font-size: 15px;
+                    margin-bottom:5px;
+                }
+                &.itemName {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
