@@ -1,17 +1,15 @@
-import React from 'react';
-import './style.scss';
+import React from "react";
+import "./style.scss";
 
-function Navbar(props){
-    function handleChange(e){
-        props.handleCallback(e.target.value);
-    };
+export default function Navbar({ handleCallback }) {
+  function handleChange(e) {
+    handleCallback(e.target.value);
+  }
 
-    return (
-        <nav>
-        <input type="text" onChange={handleChange} />
-        <button>Buscar</button>
-        </nav>
-    )
-};
-
-export default Navbar;
+  return (
+    <nav>
+      <p>Filtrar resultados</p>
+      <input type="text" onChange={handleChange} />
+    </nav>
+  );
+}
