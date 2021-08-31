@@ -19,17 +19,22 @@ export default function ItemPage() {
   }
 
   console.log(productData);
-
+  const { thumbnail, title, price, sold_quantity, permalink } = productData;
   return (
-    <div className="ItemContainer">
-      <div className="ItemMainImg">
-        <img src={productData.thumbnail} />
-      </div>
-      <div className="ItemInfo">
-        <h1>{productData.title}</h1>
-        <p>Description</p>
-        <p className="ItemPrecio">$1.000</p>
-      </div>
-    </div>
+    productData && (
+      <a href={permalink}>
+        <div className="ItemContainer">
+          <div className="ItemMainImg">
+            <img src={thumbnail} />
+          </div>
+          <div className="ItemInfo">
+            <p>{sold_quantity} vendidos</p>
+            <h1>{title}</h1>
+            {price && <p className="ItemPrecio">${price.toLocaleString()}</p>}
+            <button>Comprar</button>
+          </div>
+        </div>
+      </a>
+    )
   );
 }

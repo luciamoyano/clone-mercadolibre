@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Results from "../../components/Results";
 import SearchBar from "../../components/SearchBar";
+import Logo from "../../components/Logo";
 
 export default function Search() {
   const { site_id } = useParams();
   const [inputValue, setInputValue] = useState("");
-  const [category, setCategory] = useState("");
+  const [doneFetching, setDoneFetching] = useState(false);
 
   const [itemList, setItemList] = useState([]);
   const [searchParam, setSearchParam] = useState("");
@@ -20,28 +21,41 @@ export default function Search() {
     setInputValue(e.target.value);
   }
 
-  function handleClick() {
-    setCategory(inputValue);
-    fetchData();
+  function handleKeypress(e) {
+    if (e.keyCode === 13) {
+      fetchData(inputValue);
+    }
   }
 
-  async function fetchData() {
+  function handleClick() {
+    fetchData(inputValue);
+  }
+
+  async function fetchData(category) {
     const data = await fetch(
       `https://api.mercadolibre.com/sites/${site_id}/search?q=${category}`
     );
     const dataJson = await data.json();
-    console.log(dataJson);
     await setItemList(dataJson.results);
+    await setDoneFetching(true);
   }
 
   return (
     <>
-      <SearchBar handleChange={handleChange} handleClick={handleClick} />
-      {itemList.length > 0 && (
+      <SearchBar
+        handleChange={handleChange}
+        handleClick={handleClick}
+        handleKeypress={handleKeypress}
+      />
+      {itemList.length > 0 ? (
         <>
           <Navbar handleCallback={handleSearch} />
           <Results searchParam={searchParam} itemList={itemList} />
         </>
+      ) : doneFetching ? (
+        <p>Sin resultados, intenta con otra búsqueda</p>
+      ) : (
+        <></>
       )}
     </>
   );

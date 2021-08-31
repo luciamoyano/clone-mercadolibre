@@ -10,11 +10,11 @@ body, html, #root {
     align-items: center;
     justify-content: center;
     height: 100%;
+    img.logo {
+        width:100%;
+    }
     header {
         max-width: 300px;
-        img#logo {
-            width:100%;
-        }
     }
     ul.ml-site-list {
         list-style-type: none;

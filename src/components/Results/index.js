@@ -3,6 +3,7 @@ import Item from "../Item";
 import "./style.scss";
 
 export default function Results({ itemList, searchParam }) {
+  console.log(itemList);
   return (
     <div className="itemContainer">
       <ul className="itemList">
@@ -13,13 +14,14 @@ export default function Results({ itemList, searchParam }) {
               .includes(searchParam.toLowerCase());
           })
           .map((value, key) => {
+            const { id, title, thumbnail, price } = value;
             return (
-              <li key={value.id ? value.id : key}>
+              <li key={id ? id : key}>
                 <Item
-                  name={value.title}
-                  image={value.thumbnail}
-                  price={value.price}
-                  id={value.id}
+                  name={title}
+                  image={thumbnail}
+                  price={price.toLocaleString()}
+                  id={id}
                 />
               </li>
             );
