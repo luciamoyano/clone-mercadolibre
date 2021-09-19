@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../../components/Logo";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import countriesArr from "../../site-countries.json";
@@ -24,11 +23,9 @@ export default function Home() {
         <ul className="ml-site-list">
           {sortedCountries.map((country, key) => {
             return (
-              <>
-                <li className="ml-site-country" key={key}>
-                  <Link to={`/search/${country.id}`}>{country.name}</Link>
-                </li>
-              </>
+              <li className="ml-site-country" key={key}>
+                <Link to={`/search/${country.id}`}>{country.name}</Link>
+              </li>
             );
           })}
         </ul>

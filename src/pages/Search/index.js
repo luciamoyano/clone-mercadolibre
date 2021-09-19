@@ -39,7 +39,7 @@ export default function Search() {
     await setItemList(dataJson.results);
     await setDoneFetching(true);
   }
-  const searchState = doneFetching == true ? "searched" : "notSearched";
+  const searchState = doneFetching === true ? "searched" : "notSearched";
   return (
     <div className={`searchContainer ${searchState}`}>
       <SearchBar
