@@ -1,7 +1,3 @@
-.itemContainer {
-  width: 100%;
-  margin: 0 auto;
-}
 .itemContainer .itemList {
   display: flex;
   list-style: none;

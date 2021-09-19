@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&display=swap");
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  flex-direction: column;
+}
+.searchContainer .resultsContainer {
+  margin: 40px;
+}
+.searchContainer .resultsContainer .noResults {
+  text-align: center;
+}
+.searchContainer.searched {
+  justify-content: flex-start;
+}
+.searchContainer.searched .searchBar .searchInput {
+  background-color: #57CC99;
+}
+.searchContainer.searched .searchBar .searchInput button, .searchContainer.searched .searchBar .searchInput input {
+  color: #fff;
+  border: none;
+}
+.searchContainer.searched .searchBar h1 {
+  display: none;
+}

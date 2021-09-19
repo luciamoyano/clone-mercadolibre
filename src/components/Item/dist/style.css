@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&display=swap");
+li {
+  margin: 0 20px;
+}
+li a {
+  text-decoration: none;
+}
+li .item {
+  background: white;
+  width: 200px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  -webkit-box-shadow: 5px 5px 2px -4px #dedede;
+  -moz-box-shadow: 5px 5px 2px -4px #dedede;
+  box-shadow: 5px 5px 2px -4px #dedede;
+}
+li .item:hover {
+  -webkit-box-shadow: 5px 5px 8px -4px #979797;
+  -moz-box-shadow: 5px 5px 8px -4px #979797;
+  box-shadow: 5px 5px 8px -4px #979797;
+}
+li .item img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+li .item .itemInfo {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  color: #22577A;
+}
+li .item .itemInfo p {
+  padding: 0;
+  margin: 0;
+}
+li .item .itemInfo p.itemPrice {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+li .item .itemInfo p.itemName {
+  font-size: 15px;
+}

@@ -1,6 +1,4 @@
 import React from "react";
-import Logo from "../Logo";
-import { Link } from "react-router-dom";
 import "./style.scss";
 
 export default function SearchBar({
@@ -10,6 +8,7 @@ export default function SearchBar({
 }) {
   return (
     <nav className="searchBar">
+      <h1>¿Qué estás buscando?</h1>
       <div className="searchInput">
         <input type="text" onChange={handleChange} onKeyDown={handleKeypress} />
         <button onClick={handleClick}>Buscar</button>

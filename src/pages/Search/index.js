@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Results from "../../components/Results";
 import SearchBar from "../../components/SearchBar";
+import "./style.scss";
 
 export default function Search() {
   const { site_id } = useParams();
@@ -38,24 +39,26 @@ export default function Search() {
     await setItemList(dataJson.results);
     await setDoneFetching(true);
   }
-
+  const searchState = doneFetching == true ? "searched" : "notSearched";
   return (
-    <>
+    <div className={`searchContainer ${searchState}`}>
       <SearchBar
         handleChange={handleChange}
         handleClick={handleClick}
         handleKeypress={handleKeypress}
       />
-      {itemList.length > 0 ? (
-        <>
-          <Navbar handleCallback={handleSearch} />
-          <Results searchParam={searchParam} itemList={itemList} />
-        </>
-      ) : doneFetching ? (
-        <p>Sin resultados, intenta con otra búsqueda</p>
-      ) : (
-        <></>
-      )}
-    </>
+      <div className="resultsContainer">
+        {itemList.length > 0 ? (
+          <>
+            <Navbar handleCallback={handleSearch} />
+            <Results searchParam={searchParam} itemList={itemList} />
+          </>
+        ) : doneFetching ? (
+          <p className="noResults">Sin resultados, intenta con otra búsqueda</p>
+        ) : (
+          <></>
+        )}
+      </div>
+    </div>
   );
 }

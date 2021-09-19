@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    flex-direction: column;
+    .resultsContainer {
+        margin:40px;
+        .noResults {
+            text-align: center;
+        }
+    }
+    &.searched {
+        justify-content: flex-start;
+        .searchBar { 
+            .searchInput {
+                background-color:$verde-agua;
+                button, input {
+                    color:#fff;
+                    border:none;
+                }
+            }
+            h1 {
+                display:none;
+            }
+        }
+    }
+}

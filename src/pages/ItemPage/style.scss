@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .itemPageContainer {
     min-height: 100vh;
     width: 100%;
@@ -25,7 +27,7 @@
             border-left:2px solid #eee;
              button {
                 border:none;
-                background:navy;
+                background:$verde-agua;
                 text-transform: uppercase;
                 cursor: pointer;
                 padding:10px;
@@ -34,7 +36,7 @@
                 font-size:12px;
                 letter-spacing: 0.05em;
                 &:hover,&:active,&:focus {
-                    background-color:rgb(99, 112, 231);
+                    background-color:$azul-claro;
                 }
             }
         }

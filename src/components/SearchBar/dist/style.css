@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&display=swap");
+nav.searchBar {
+  color: #22577A;
+  text-align: center;
+  -webkit-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+nav.searchBar.searched .searchInput {
+  background-color: #57CC99;
+}
+nav.searchBar.searched .searchInput button, nav.searchBar.searched .searchInput input {
+  color: #fff;
+  border: none;
+}
+nav.searchBar.searched h1 {
+  display: none;
+}
+nav.searchBar .searchInput {
+  padding: 30px;
+  width: 100%;
+}
+nav.searchBar .searchInput input, nav.searchBar .searchInput button {
+  color: #22577A;
+  font-size: 18px;
+  border: none;
+  background: transparent;
+}
+nav.searchBar .searchInput button {
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 15px;
+  font-weight: bold;
+  color: #38A3A5;
+}
+nav.searchBar .searchInput button:hover, nav.searchBar .searchInput button:active, nav.searchBar .searchInput button:focus {
+  color: #22577A;
+}
+nav.searchBar .searchInput input {
+  border-bottom: 1px solid #38A3A5;
+  padding: 10px;
+}
+nav.searchBar .searchInput input:focus, nav.searchBar .searchInput input:active {
+  outline: none;
+}
+nav.searchBar img.logo {
+  display: block;
+  width: 60px;
+  align-self: flex-start;
+}
