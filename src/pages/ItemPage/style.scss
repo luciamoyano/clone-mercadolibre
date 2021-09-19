@@ -24,7 +24,7 @@
             display: block;
             border-radius:20px 0 0 20px;
             @media (max-width: 850px) {
-                border-radius:20px 0;
+                border-radius:20px 20px 0 0;
             }
         }
         .itemInfo {

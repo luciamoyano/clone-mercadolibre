@@ -16,7 +16,6 @@ export default function ItemPage() {
     }
     fetchData();
   }, [product_id]);
-  console.log(productData);
 
   const { pictures, title, price, sold_quantity, permalink } = productData;
   return (

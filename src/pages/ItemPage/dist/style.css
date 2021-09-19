@@ -29,7 +29,7 @@
 }
 @media (max-width: 850px) {
   .itemPageContainer .itemContainer img {
-    border-radius: 20px 0;
+    border-radius: 20px 20px 0 0;
   }
 }
 .itemPageContainer .itemContainer .itemInfo {
