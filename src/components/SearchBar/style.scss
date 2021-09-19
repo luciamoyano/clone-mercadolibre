@@ -1,6 +1,33 @@
-#searchBar {
-    width: 100%;
+nav.searchBar {
+    width:100%;
+    background-color:#FFE600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    .searchInput{
+        background:#fff;
+        padding:6px;
+        border-radius:10px;
+        input, button {
+            border:none;
+            background: transparent;
+        }
+        button {
+            text-transform: uppercase;
+            cursor: pointer;
+            border-left:1px solid #ccc;
+            padding-left:10px;
+        }
+        input {
+            &:focus, &:active {
+                outline:1px solid #ccc;
+            }
+        }
+    } 
     img.logo {
-        width: 50px;
+        display:block;
+        width: 60px;
+        align-self: flex-start;
     }
 }

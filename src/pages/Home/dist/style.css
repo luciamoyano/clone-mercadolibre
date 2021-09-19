@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&display=swap");
+body, html, #root {
+  height: 100%;
+}
+
+#homeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+#homeWrapper img.logo {
+  width: 100%;
+}
+#homeWrapper header {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+}
+#homeWrapper header h1 {
+  color: #22577A;
+  font-size: 50px;
+}
+#homeWrapper ul.ml-site-list {
+  list-style-type: none;
+  padding: 0;
+}
+#homeWrapper ul.ml-site-list li.ml-site-country {
+  display: inline-block;
+  margin: 10px;
+}
+#homeWrapper ul.ml-site-list li.ml-site-country a {
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 15px;
+  color: #38A3A5;
+  border: 2px solid #38A3A5;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+#homeWrapper ul.ml-site-list li.ml-site-country a:hover {
+  color: #fff;
+  background: #38A3A5;
+}

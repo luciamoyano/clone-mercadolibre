@@ -11,6 +11,11 @@ li {
         -webkit-box-shadow: 5px 5px 2px -4px rgba(222,222,222,1);
         -moz-box-shadow: 5px 5px 2px -4px rgba(222,222,222,1);
         box-shadow: 5px 5px 2px -4px rgba(222,222,222,1);
+        &:hover {
+            -webkit-box-shadow: 5px 5px 8px -4px rgb(151, 151, 151);
+            -moz-box-shadow: 5px 5px 8px -4px rgb(151, 151, 151);
+            box-shadow: 5px 5px 8px -4px rgb(151, 151, 151);
+        }
         img {
             display: block;
             max-width: 100%;
@@ -20,15 +25,17 @@ li {
         .itemInfo {
             border-top:1px solid #ddd;
             padding:10px;
+            color:#222;
             p {
                 padding:0;
                 margin: 0;
                 &.itemPrice {
-                    font-size: 15px;
                     margin-bottom:5px;
+                    font-size: 13px;
+                    font-weight: bold;
                 }
                 &.itemName {
-                    font-size: 10px;
+                    font-size: 15px;
                 }
             }
         }

@@ -1,8 +1,18 @@
-nav {
+nav.filterBar {
     width:100%;
-    background-color:#FFE600;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 40px;
+    justify-content: flex-start;
+    padding:20px 0 0 20px;
+    label {
+        margin-right:10px;
+    }
+    input {
+        background:transparent;
+        border:none;
+        border-bottom:1px solid #333;
+            &:focus, &:active {
+                outline:none;
+            }
+    }
 }

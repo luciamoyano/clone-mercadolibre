@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Results from "../../components/Results";
 import SearchBar from "../../components/SearchBar";
-import Logo from "../../components/Logo";
 
 export default function Search() {
   const { site_id } = useParams();

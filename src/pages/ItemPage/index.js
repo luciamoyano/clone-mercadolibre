@@ -7,34 +7,37 @@ export default function ItemPage() {
   const { product_id } = useParams();
 
   useEffect(() => {
+    async function fetchData() {
+      const data = await fetch(
+        `https://api.mercadolibre.com/items/${product_id}`
+      );
+      const dataJson = await data.json();
+      await setProductData(dataJson);
+    }
     fetchData();
-  }, []);
-
-  async function fetchData() {
-    const data = await fetch(
-      `https://api.mercadolibre.com/items/${product_id}`
-    );
-    const dataJson = await data.json();
-    await setProductData(dataJson);
-  }
-
+  }, [product_id]);
   console.log(productData);
-  const { thumbnail, title, price, sold_quantity, permalink } = productData;
+
+  const { pictures, title, price, sold_quantity, permalink } = productData;
   return (
-    productData && (
-      <a href={permalink}>
-        <div className="ItemContainer">
-          <div className="ItemMainImg">
-            <img src={thumbnail} />
+    <div className="itemPageContainer">
+      {productData && pictures ? (
+        <div className="itemContainer">
+          <div className="itemMainImg">
+            {pictures && <img src={pictures[0].url} alt="product-thumbnail" />}
           </div>
-          <div className="ItemInfo">
+          <div className="itemInfo">
             <p>{sold_quantity} vendidos</p>
             <h1>{title}</h1>
-            {price && <p className="ItemPrecio">${price.toLocaleString()}</p>}
-            <button>Comprar</button>
+            {price && <p className="itemPrecio">${price.toLocaleString()}</p>}
+            <a href={permalink}>
+              <button>Comprar</button>
+            </a>
           </div>
         </div>
-      </a>
-    )
+      ) : (
+        <p>Loading</p>
+      )}
+    </div>
   );
 }

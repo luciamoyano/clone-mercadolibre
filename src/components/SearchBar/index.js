@@ -9,12 +9,11 @@ export default function SearchBar({
   handleKeypress,
 }) {
   return (
-    <div id="searchBar">
-      <Link to="/">
-        <Logo />
-      </Link>
-      <input type="text" onChange={handleChange} onKeyDown={handleKeypress} />
-      <button onClick={handleClick}>Buscar</button>
-    </div>
+    <nav className="searchBar">
+      <div className="searchInput">
+        <input type="text" onChange={handleChange} onKeyDown={handleKeypress} />
+        <button onClick={handleClick}>Buscar</button>
+      </div>
+    </nav>
   );
 }

@@ -1,0 +1,12 @@
+.itemContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+.itemContainer .itemList {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0px auto;
+  padding: 40px;
+}

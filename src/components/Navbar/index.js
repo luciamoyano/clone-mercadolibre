@@ -7,8 +7,8 @@ export default function Navbar({ handleCallback }) {
   }
 
   return (
-    <nav>
-      <p>Filtrar resultados</p>
+    <nav className="filterBar">
+      <label>Filtrar resultados</label>
       <input type="text" onChange={handleChange} />
     </nav>
   );

@@ -20,19 +20,19 @@ export default function Home() {
   return (
     <div id="homeWrapper">
       <header>
-        <Logo />
+        <h1>El Mercadito</h1>
+        <ul className="ml-site-list">
+          {sortedCountries.map((country, key) => {
+            return (
+              <>
+                <li className="ml-site-country" key={key}>
+                  <Link to={`/search/${country.id}`}>{country.name}</Link>
+                </li>
+              </>
+            );
+          })}
+        </ul>
       </header>
-      <ul className="ml-site-list">
-        {sortedCountries.map((country, key) => {
-          return (
-            <>
-              <li className="ml-site-country" key={key}>
-                <Link to={`/search/${country.id}`}>{country.name}</Link>
-              </li>
-            </>
-          );
-        })}
-      </ul>
     </div>
   );
 }
