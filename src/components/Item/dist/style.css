@@ -1,18 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&display=swap");
 li {
-  margin: 0 20px;
+  margin: 0;
 }
 li a {
   text-decoration: none;
 }
 li .item {
   background: white;
-  width: 200px;
-  margin-bottom: 20px;
+  width: 250px;
+  margin-bottom: 40px;
   border-radius: 4px;
   -webkit-box-shadow: 5px 5px 2px -4px #dedede;
   -moz-box-shadow: 5px 5px 2px -4px #dedede;
   box-shadow: 5px 5px 2px -4px #dedede;
+}
+@media (max-width: 600px) {
+  li .item {
+    width: 100%;
+    min-width: 200px;
+  }
 }
 li .item:hover {
   -webkit-box-shadow: 5px 5px 8px -4px #979797;

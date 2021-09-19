@@ -9,21 +9,40 @@
 .itemPageContainer .itemContainer {
   background-color: #fff;
   max-width: 700px;
-  width: 70%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
 }
+@media (max-width: 850px) {
+  .itemPageContainer .itemContainer {
+    flex-direction: column;
+    margin: 30px;
+    width: 100%;
+  }
+}
 .itemPageContainer .itemContainer img {
   width: 100%;
   display: block;
+  border-radius: 20px 0 0 20px;
+}
+@media (max-width: 850px) {
+  .itemPageContainer .itemContainer img {
+    border-radius: 20px 0;
+  }
 }
 .itemPageContainer .itemContainer .itemInfo {
   padding: 40px;
   width: 70%;
   border-left: 2px solid #eee;
+}
+@media (max-width: 850px) {
+  .itemPageContainer .itemContainer .itemInfo {
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid #eee;
+  }
 }
 .itemPageContainer .itemContainer .itemInfo button {
   border: none;

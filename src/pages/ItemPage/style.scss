@@ -7,21 +7,32 @@
     align-items:center;
     justify-content: center;
     .itemContainer {
+        @media (max-width: 850px) {
+            flex-direction: column;
+            margin: 30px;
+            width:100%;
+        }
         background-color:#fff;
         max-width: 700px;
-        width:70%;
         margin:0 auto;
         display: flex;
         align-items:center;
         justify-content: center;
         border-radius:20px;
-        .itemMainImg {
-        }
         img {
             width: 100%;
             display: block;
+            border-radius:20px 0 0 20px;
+            @media (max-width: 850px) {
+                border-radius:20px 0;
+            }
         }
         .itemInfo {
+            @media (max-width: 850px) {
+                width: 100%;
+                border-left:none;
+                border-top: 2px solid #eee;
+            }
             padding:40px;
             width: 70%;
             border-left:2px solid #eee;

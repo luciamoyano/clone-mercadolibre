@@ -7,11 +7,8 @@ body, html, #root {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 100%;
+  min-height: 100%;
   position: relative;
-}
-#homeWrapper img.logo {
-  width: 100%;
 }
 #homeWrapper header {
   max-width: 800px;
@@ -45,4 +42,17 @@ body, html, #root {
 #homeWrapper ul.ml-site-list li.ml-site-country a:hover {
   color: #fff;
   background: #38A3A5;
+}
+@media (max-width: 650px) {
+  #homeWrapper header h1 {
+    font-size: 30px;
+  }
+  #homeWrapper ul.ml-site-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  #homeWrapper ul.ml-site-list li.ml-site-country {
+    display: block;
+  }
 }
